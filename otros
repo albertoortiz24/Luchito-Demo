@@ -1,0 +1,83 @@
+<Fragment>
+        <Title/>
+        <br/>   <br/>   <br/>   <br/>  
+        
+            <Grid 
+              container
+              direction="row"
+              justify="center"
+              alignItems="center" spacing={40} 
+            >
+            <Grid item sm={12} >
+                <Typography variant='h1' style={{textAlign:'center'}}>
+                    {this.state.titulo}
+                </Typography>
+            </Grid> {/*Titulo*/}
+            
+
+            <Grid item sm={6} style={{alignItems:'center'}}>
+                <img style={{maxHeight:500,maxWidth:700,borderRadius:3}} src=' https://upload.wikimedia.org/wikipedia/commons/9/92/01_Chilaquiles_verdes_con_frijoles_chinos.jpg' />
+            </Grid> {/* imagen */}
+            <br/>   <br/>  <br/>   <br/>  <br/>   <br/>  
+            
+            <br/>   <br/>  <br/>   <br/>  <br/>   <br/>  
+           
+             <Grid item sm={12} style={{padding:7,textAlign:'center'}}>
+                    <Typography variant='h4'>
+                        Descripción
+                    </Typography>
+                    <Typography variant='body1'>
+                        {this.state.description}
+                    </Typography>
+                </Grid> {/*descri*/}
+
+                <br/>   <br/>  <br/>   <br/>    <br/>   <br/>  <br/>   <br/>
+
+                <Grid  container
+                    direction="column"
+                    justify="center"
+                    alignItems="center" 
+                    sm={12} 
+                    >
+                    <Typography variant='h3'>
+                        Ingredientes
+                    </Typography>
+                    {this.state.ingredientes.map(ingrediente=>(
+                        <List sm={12} style={{textAlign:'center'}} >
+                         <ListItem sm={6} style={{alignItems:'center'}}>
+                          <Checkbox  />
+                          <ListItemText primary="2 Piezas de Jitomate" />
+                        </ListItem>
+                        </List>
+                    ))}
+                </Grid> {/*ingredients*/}
+
+                <Grid  container
+                    direction="column"
+                    justify="center"
+                    alignItems="center" 
+                    sm={12} 
+                    >
+                    <Typography variant='h3'>
+                        Procedimiento
+                    </Typography>
+                    {this.state.ingredientes.map(ingrediente=>(
+                        <List sm={12} style={{textAlign:'center'}} >
+                         <ListItem sm={6} style={{alignItems:'center'}}>
+                          <ListItemText primary="Pasitos" />
+                        </ListItem>
+                        </List>
+                    ))}
+                </Grid> {/*procedimiento*/}
+
+
+
+
+                {/* <Grid item sm={6} style={{alignSelf:'center',paddingTop:'15'}} >
+                <iframe src='https://www.youtube.com/embed/WpCe-pCKV_Y' title='video'/>    
+             </Grid> video */}
+
+            </Grid> {/*padre*/}
+    
+
+        </Fragment>
